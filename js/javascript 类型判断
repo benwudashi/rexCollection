@@ -1,0 +1,18 @@
+	判断一个变量是否是String类型（源自angular.js）：function isString(value) {return typeof value === 'string';}
+	判断一个变量是否是Number类型（源自angular.js）：function isNumber(value) {return typeof value === 'number';}
+	function isObject(value) {return value !== null && typeof value === 'object';}// http://jsperf.com/isobject4
+	function isDefined(value) {return typeof value !== 'undefined';}
+	function isUndefined(value) {return typeof value === 'undefined';}
+	function isDate(value) {return toString.call(value) === '[object Date]';}
+	var isArray = Array.isArray;
+	function isRegExp(value) {return toString.call(value) === '[object RegExp]';}
+	function isWindow(obj) {return obj && obj.window === obj;}
+	function isElement(node) {return !!(node && (node.nodeName  || (node.prop && node.attr && node.find)));}
+	JS中的变量是松散类型（即弱类型）的，可以用来保存任何类型的数据。
+	typeof 可以用来检测给定变量的数据类型，可能的返回值：
+		(1). 'undefined' --- 这个值未定义；
+		(2). 'boolean'    --- 这个值是布尔值；
+		(3). 'string'        --- 这个值是字符串；
+		(4). 'number'     --- 这个值是数值；
+		(5). 'object'       --- 这个值是对象或null；
+		(6). 'function'    --- 这个值是函数。
